@@ -1,0 +1,19 @@
+{
+  "name": "FwdCo",
+  "version": "0.0.0",
+  "dependencies": {
+	"winston":"*",
+    "flatiron":"*",
+	"union":"*",
+	"connect":"*",
+	"grunt": "*",
+	"grunt-contrib-compass": "*",
+	"grunt-contrib-uglify": "*",
+	"grunt-contrib-watch": "*",
+	"grunt-contrib-copy": "*",
+	"grunt-preprocess": "*",
+    "oauth":"*",
+    "firebase":"*"
+
+  }
+}

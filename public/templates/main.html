@@ -1,0 +1,43 @@
+<section id="home" data-user="{{user}}">
+
+    <!--
+        JSON string of candidates, caching here so we don't have to
+        do another trip to the server
+    -->
+    <div id="possible-candidates">
+        {{candidates}}
+    </div>
+
+
+    <div id="instructions">
+        <h1 class="title">{{catchphrase}}</h1>
+        <p>
+            All you need to do is click on the big red button to send out a tweet to the world.
+            Who's gonna get it? No clue. But you just might be the one to bring a little joy to that person's
+            world.
+        </p>
+
+        <div class="button" id="send"><span>Tweet!</span></div>
+
+
+        <div id="sending-panel">
+            <h1 class="title" id="send-msg">I'm sending your tweet!</h1>
+        </div>
+
+
+       <div id="end-panel">
+           <h1 class="title" id="end-msg">
+               I've sent the tweet!
+           </h1>
+           <p>{{endmessage}}</p>
+
+           <div class="button" id="end-btn"><span>Lets do it again!</span></div>
+
+       </div>
+
+    </div><!--end instructions-->
+
+
+
+
+</section>

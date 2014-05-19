@@ -1,0 +1,129 @@
+@import "header";
+@import "walkthru";
+@import "functions";
+*{
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family: "proxima-nova-alt";
+  background: #e1e8ed;
+  color:#292f33;
+}
+
+#possible-candidates{
+  display: none;
+}
+
+#instructions{
+  .title{
+    font-size: 600%;
+    letter-spacing: -3px;
+    text-align: center;
+  }
+
+  p{
+    padding-top: 20px;
+    display: block;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .button{
+    max-width: 200px;
+    position: relative;
+    top:20px;
+    height:60px;
+    background-color: #db4437;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 1px 1px 8px rgba(200,200,200,0.8);
+    @include transition((background-color));
+    span{
+      text-align: center;
+      font-weight: bold;
+      color:#fff;
+      display: block;
+      position: relative;
+      padding:20px;
+      font-size: 130%;
+    }
+    &:hover{
+      cursor: pointer;
+      @include transition((background-color));
+      color:$mainColor;
+      background-color: #4285f4;
+    }
+  }
+
+
+}
+//
+#sending-panel{
+  position: absolute;
+  min-height: 100%;
+  min-width:100%;
+  top:0;
+  background: #0f9d58;
+  color:#fff;
+}
+
+#end-panel{
+  position: absolute;
+  min-height: 100%;
+  min-width:100%;
+  top:0;
+  background:#f4b400;
+  color:#fff;
+  .title{
+    letter-spacing: 4px;
+  }
+
+  p{
+    font-size: 165%;
+    padding-bottom: 20px;
+  }
+}
+//
+#loading{
+  position: absolute;
+  top:30px;
+  left:30px;
+  z-index: -1;
+  .title{
+    letter-spacing: 4px;
+    font-size:400%;
+  }
+}
+
+#disclaimer{
+  position: absolute;
+  bottom:0;
+  max-width: 400px;
+  left:50%;
+  margin-left:-70px;
+  padding:40px;
+  margin-top: 400px;
+  background:#f4b400;
+  @include transition((background-color));
+  &:hover{
+    @include transition((background-color,color));
+    background-color:#0f9d58;
+    color:"#fff";
+    cursor: pointer;
+    a{
+      @include transition((color));
+      color:"#fff";
+    }
+  }
+  a{
+    text-align: center;
+    text-decoration: none;
+    @include transition((color));
+    color:#333;
+
+
+  }
+}

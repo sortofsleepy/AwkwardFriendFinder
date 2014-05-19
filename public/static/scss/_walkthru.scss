@@ -1,0 +1,26 @@
+@import "functions";
+
+#walkthru{
+  position: absolute;
+  top:-9000px;
+  width:100%;
+  min-height: 100%;
+
+  .slide{
+    position: absolute;
+    top:0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+  #slide1{
+    background: red;
+    h2{
+      color:#fff;
+      position: relative;
+      font-size: 300%;
+      padding: 10px;
+
+    }
+  }
+
+}//end walkthru //

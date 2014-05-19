@@ -1,0 +1,46 @@
+$defaultTransitionTime:0.5s;
+$baseFontSize:16;
+
+/**
+  	Mixin to handle transitions.
+  	@param{List} $props SASS list of properties that need to be transitions.
+  	@param{Number} $time time for the transition
+  	@param{String} $easeType type of easing to be used.
+*/
+@mixin transition($props,$time:$defaultTransitionTime,$easeType:ease){
+  $list:();
+  @each $prop in $props{
+    $list:append($list,$prop $time $easeType,comma);
+  }
+
+  -webkit-transition:$list;
+  -moz-transition:$list;
+  transition:$list;
+}
+
+/**
+  	Mixin to handle transforms.
+  	@param{List} $props SASS list of properties that need to be transitions.
+  	@param{Number} $time time for the transition
+  	@param{String} $easeType type of easing to be used.
+*/
+@mixin transforms($props,$time:$defaultTransitionTime,$easeType:ease){
+  $list:();
+  @each $prop in $props{
+    $list:append($list,$prop $time $easeType,comma);
+  }
+
+  -webkit-transform:$list;
+  -moz-transform:$list;
+  transform:$list;
+}
+
+/**
+  Calculates a em font based on the
+  standard 100% font size for the browser,
+  which is usually 16px
+*/
+@mixin responsiveFont($target,$baseSize:$baseFontSize){
+  $final:$target / $baseSize;
+  font-size: $final + em;
+}

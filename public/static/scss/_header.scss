@@ -1,0 +1,65 @@
+@import "functions";
+$mainColor:#55acee;
+
+header{
+  border-top:solid 4px $mainColor;
+  height:100%;
+  width:100%;
+  padding-top: 20px;
+  display: block;
+
+
+  .wrap{
+    padding-left: 20px;
+    position:relative;
+    text-align: center;
+
+
+    #intro{
+        margin-top:-900px;
+        .title{
+          font-size: 600%;
+          letter-spacing: -4px;
+          text-align: center;
+        }
+
+        #disclaimer-link{
+
+            font-size:60%;
+            font-style: italic;
+            @include transition((color));
+            color:#333;
+
+            &:hover{
+              cursor: pointer;
+              @include transition((color));
+              color:$mainColor;
+            }
+        }
+
+        /**
+          The sign-in button.
+         */
+        #signin{
+          height:28px;
+          text-align: center;
+          width:158px;
+          margin:0 auto;
+          position: relative;
+          top:20px;
+        }
+
+        .signed-in{}
+        .not-signed-in{
+          display: block;
+          background-image:url("/img/sign-in-with-twitter-gray.png");
+          &:hover{
+            cursor: pointer;
+            border:solid 1px #d1d1d1;
+            border-radius: 4px;
+          }
+        }
+    }//end intro
+  };//end wrap
+
+}

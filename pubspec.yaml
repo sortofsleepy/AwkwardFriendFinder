@@ -1,0 +1,4 @@
+name: DartTest
+dependencies:
+  browser: any
+  js: any
